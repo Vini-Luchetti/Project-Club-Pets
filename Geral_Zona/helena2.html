@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube do Corvo | Adote seu Pet</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d0d0d; /* Fundo preto */
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1a0033 0%, #4b0082 100%);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #8a2be2; /* Roxo vivo */
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #d8bfd8;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Container dos Pets */
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        /* Cartões dos Corvos */
+        .card {
+            background-color: #1a1a1a;
+            border: 1px solid #4b0082;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+            border-color: #8a2be2;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 2px solid #2d004d;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            color: #b366ff;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .preco {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Botão de Compra */
+        .btn {
+            background-color: #8a2be2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            width: 100%;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #5c1b99;
+        }
+
+        /* Estilos da Janela de Pagamento (Modal) */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.8); 
+        }
+
+        .modal-content {
+            background-color: #1a0033;
+            margin: 10% auto; 
+            padding: 2rem; 
+            border: 2px solid #8a2be2; 
+            width: 90%; 
+            max-width: 400px; 
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.6);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #fff;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #4b0082;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        .modal-content input::placeholder {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clube do Corvo</h1>
+        <p>Adoção de Pets Fofos e Sombrios</p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550853024-fae8cd4be47f?auto=format&fit=crop&w=500&q=80" alt="Corvo Sombra">
+            <div class="card-content">
+                <h3>Sombra</h3>
+                <p>Curioso e adora objetos brilhantes.</p>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn" onclick="abrirModal('Sombra', 150)">Comprar Pet</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1616422285623-149021204f14?auto=format&fit=crop&w=500&q=80" alt="Corvo Edgar">
+            <div class="card-content">
+                <h3>Edgar</h3>
+                <p>Quieto, observador e amante de poesias.</p>
+                <p class="preco">R$ 200,00</p>
+                <button class="btn" onclick="abrirModal('Edgar', 200)">Comprar Pet</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1590422749876-0033ab7194f1?auto=format&fit=crop&w=500&q=80" alt="Corvo Pingo">
+            <div class="card-content">
+                <h3>Pingo</h3>
+                <p>Muito dócil, adora ficar no ombro.</p>
+                <p class="preco">R$ 180,00</p>
+                <button class="btn" onclick="abrirModal('Pingo', 180)">Comprar Pet</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="janelaCompra" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2 id="tituloModal" style="color: #b366ff; margin-bottom: 10px;">Finalizar Adoção</h2>
+            <p id="precoModal" style="margin-bottom: 20px; font-weight: bold;"></p>
+            
+            <form onsubmit="event.preventDefault(); alert('Pagamento aprovado! O seu novo Corvo chegará em breve.'); fecharModal();">
+                <input type="text" placeholder="Nome no Cartão" required>
+                <input type="text" placeholder="Número do Cartão" required>
+                <input type="text" placeholder="Validade (MM/AA)" required>
+                <input type="text" placeholder="CVV" required>
+                <button type="submit" class="btn">Confirmar Pagamento</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Funções para fazer a janela de compra funcionar
+        function abrirModal(nomePet, preco) {
+            document.getElementById('janelaCompra').style.display = 'block';
+            document.getElementById('tituloModal').innerText = 'Adotar ' + nomePet;
+            document.getElementById('precoModal').innerText = 'Total a pagar: R$ ' + preco + ',00';
+        }
+
+        function fecharModal() {
+            document.getElementById('janelaCompra').style.display = 'none';
+        }
+
+        // Fecha a janela se clicar fora dela
+        window.onclick = function(event) {
+            let modal = document.getElementById('janelaCompra');
+            if (event.target == modal) {
+                fecharModal();
+            }
+        }
+    </script>
+</body>
+</html>

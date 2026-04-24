@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritual de Admissão | Clube Obscuro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo específico para o Quiz */
+        .quiz-container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #1a1a1a;
+            padding: 3rem;
+            border-radius: 15px;
+            border: 2px solid #8a2be2;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+        }
+
+        .pergunta {
+            display: none; /* Esconde as perguntas inicialmente */
+        }
+
+        .pergunta.ativa {
+            display: block; /* Mostra apenas a pergunta atual */
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-quiz {
+            background-color: #8a2be2;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .btn-quiz:hover {
+            background-color: #b366ff;
+            transform: scale(1.05);
+        }
+
+        /* Estilo para a caixa de digitar o nome */
+        .input-quiz {
+            width: 80%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #4b0082;
+            background-color: #0d0d0d;
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div id="p1" class="pergunta ativa">
+            <h2>Bem-vinda ao Clube Obscuro...</h2>
+            <p style="margin-bottom: 20px;">Qual é o seu nome de Guardião(ã)?</p>
+            <input type="text" id="nomeUsuario" placeholder="Digite seu nome..." class="input-quiz">
+            <br>
+            <button class="btn-quiz" onclick="guardarNome()">Começar Ritual</button>
+        </div>
+
+        <div id="p2" class="pergunta">
+            <h2>Saudações!</h2>
+            <p style="margin-bottom: 20px;">Você gosta de Pets?</p>
+            <button class="btn-quiz" onclick="proxima('p2', 'p3')">Sim!</button>
+            <button class="btn-quiz" onclick="alert('Talvez você ainda não conheça os nossos... tente de novo!')">Não...</button>
+        </div>
+
+        <div id="p3" class="pergunta">
+            <h2>Interessante...</h2>
+            <p style="margin-bottom: 20px;">Você quer ter um Pet Sombrio e fofo?</p>
+            <button class="btn-quiz" onclick="proxima('p3', 'p4')">Com certeza!</button>
+            <button class="btn-quiz" onclick="proxima('p3', 'p4')">Tenho curiosidade</button>
+        </div>
+
+        <div id="p4" class="pergunta">
+            <h2>Quase lá...</h2>
+            <p style="margin-bottom: 20px;">Você já sabe como cuidar de um Corvo Mágico?</p>
+            <button class="btn-quiz" onclick="finalizar()">Já nasci sabendo!</button>
+            <button class="btn-quiz" onclick="finalizar()">Vou aprender tudo!</button>
+        </div>
+    </div>
+
+    <script>
+        function proxima(atual, proximaId) {
+            document.getElementById(atual).classList.remove('ativa');
+            document.getElementById(proximaId).classList.add('ativa');
+        }
+
+        function guardarNome() {
+            let nome = document.getElementById('nomeUsuario').value;
+            if (nome === "") {
+                alert("Um Guardião precisa de um nome!");
+            } else {
+                // A Mágica: Guarda o nome na "bolsa do navegador"
+                localStorage.setItem('nomeDoPet', nome);
+                proxima('p1', 'p2');
+            }
+        }
+
+        function finalizar() {
+            let nome = localStorage.getItem('nomeDoPet');
+            alert("✨ O Oráculo aprovou sua entrada, " + nome + "! ✨\nPrepare-se para conhecer seus novos amigos.");
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+}
+
+/* Atualização do Header para ficar Fixo */
+header {
+    background: linear-gradient(135deg, #1a0033 0%, #4b0082 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Espalha a logo e o menu */
+    align-items: center;
+    border-bottom: 4px solid #8a2be2;
+    position: fixed; /* A Mágica do menu fixo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que fique por cima de tudo */
+}
+
+/* Para o conteúdo não ficar escondido atrás do menu fixo */
+body {
+    padding-top: 100px; 
+}
+
+/* Estilo dos Links do Menu */
+.menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #b366ff;
+}
+
+.logo h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo p {
+    color: #d8bfd8;
+    font-style: italic;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 2px solid #b366ff;
+    color: #b366ff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #b366ff;
+    color: #1a0033;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #4b0082;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+    border-color: #8a2be2;
+}
+
+/* Espaço preparado para as futuras imagens */
+.image-placeholder {
+    width: 100%;
+    height: 220px;
+    background-color: #2d004d;
+    border-bottom: 2px solid #4b0082;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a2be2;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h3 { color: #b366ff; }
+.preco { font-weight: bold; margin: 10px 0; }
+
+.btn-comprar {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover { background-color: #5c1b99; }
+
+/* Modais (Janelas flutuantes) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #1a0033;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 2px solid #8a2be2;
+    width: 90%; max-width: 400px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #0d0d0d;
+    border: 1px solid #4b0082;
+    color: white;
+}
+
+/* Estilo da Paginação */
+.paginacao {
+    text-align: center;
+    margin: 3rem 0;
+    width: 100%;
+}
+
+.paginacao a {
+    color: white;
+    background-color: #1a0033;
+    border: 1px solid #4b0082;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.paginacao a:hover {
+    background-color: #5c1b99;
+}
+
+.paginacao a.ativo {
+    background-color: #8a2be2;
+    border-color: #b366ff;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Sombrios & Fofos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 style="font-size: 1.5rem;">Clube do Corvo</h1>
+        </div>
+        
+        <nav class="menu">
+            <a href="home.html">Adoção</a>
+            <a href="caldeirao.html">O Caldeirão</a>
+            <a href="contato.html">Contato Sombrio</a>
+        </nav>
+
+        <button class="btn-login" id="botaoNome" onclick="abrirModal('modalLogin')">Entrar</button>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="image-placeholder">Aguardando Arte da Helena...</div>
+            <div class="card-content">
+                <h3>Sombra</h3>
+                <p>Curioso e adora roubar chaves.</p>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="abrirModalCompra('Sombra')">Adotar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-placeholder">Aguardando Arte da Helena...</div>
+            <div class="card-content">
+                <h3>Edgar</h3>
+                <p>Poeta, fofo e levemente dramático.</p>
+                <p class="preco">R$ 200,00</p>
+                <button class="btn-comprar" onclick="abrirModalCompra('Edgar')">Adotar</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-placeholder">Aguardando Arte da Helena...</div>
+            <div class="card-content">
+                <h3>Sombra</h3>
+                <p>Curioso e adora roubar chaves.</p>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="abrirModalCompra('Sombra')">Adotar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-placeholder">Aguardando Arte da Helena...</div>
+            <div class="card-content">
+                <h3>Edgar</h3>
+                <p>Poeta, fofo e levemente dramático.</p>
+                <p class="preco">R$ 200,00</p>
+                <button class="btn-comprar" onclick="abrirModalCompra('Edgar')">Adotar</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-placeholder">Aguardando Arte da Helena...</div>
+            <div class="card-content">
+                <h3>Sombra</h3>
+                <p>Curioso e adora roubar chaves.</p>
+                <p class="preco">R$ 150,00</p>
+                <button class="btn-comprar" onclick="abrirModalCompra('Sombra')">Adotar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-placeholder">Aguardando Arte da Helena...</div>
+            <div class="card-content">
+                <h3>Edgar</h3>
+                <p>Poeta, fofo e levemente dramático.</p>
+                <p class="preco">R$ 200,00</p>
+                <button class="btn-comprar" onclick="abrirModalCompra('Edgar')">Adotar</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="paginacao">
+        <a href="home.html" >1</a>
+        <a href="pagina2.html">2</a>
+        <a href="pagina3.html" class="ativo">3</a>
+    </div>
+
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <h2 style="color: #b366ff;">Acesso Secreto</h2>
+            <p>Apenas para guardiões de pets.</p>
+            <input type="text" placeholder="Nome de Guardião">
+            <input type="password" placeholder="Senha Mágica">
+            <button class="btn-comprar" onclick="fecharModais()">Acessar Portal</button>
+            <button class="btn-login" style="margin-top: 10px; width: 100%;" onclick="fecharModais()">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="modalCompra" class="modal">
+        <div class="modal-content">
+            <h2 id="tituloCompra" style="color: #b366ff;">Adoção</h2>
+            <p>Preencha para concluir o ritual de adoção.</p>
+            <input type="text" placeholder="Seu nome">
+            <input type="text" placeholder="Endereço do castelo">
+            <button class="btn-comprar" onclick="confirmarCompra()">Enviar Confirmação</button>
+            <button class="btn-login" style="margin-top: 10px; width: 100%;" onclick="fecharModais()">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

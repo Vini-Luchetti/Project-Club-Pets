@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvos Fofos | Pets de Outro Mundo</title>
+    <style>
+        /* Reset básico e configurações de fonte */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d0d0d; /* Preto profundo */
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Estilo do Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1a0033 0%, #4b0082 100%);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #8a2be2; /* Roxo vibrante */
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #d8bfd8; /* Roxo claro/Lilás */
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Container Principal da Galeria */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        /* Estilo dos Cards dos Pets */
+        .card {
+            background-color: #1a1a1a;
+            border: 1px solid #4b0082;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 300px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+            border-color: #8a2be2;
+        }
+
+        /* Área da Imagem */
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 2px solid #2d004d;
+        }
+
+        /* Textos dentro do Card */
+        .card-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #b366ff; /* Roxo chamativo */
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #050505;
+            border-top: 1px solid #2d004d;
+            color: #666;
+            margin-top: 2rem;
+        }
+
+        footer span {
+            color: #8a2be2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clube do Corvo</h1>
+        <p>Porque os pets mais sombrios também são os mais fofos.</p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550853024-fae8cd4be47f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corvo Fofo olhando de lado">
+            <div class="card-content">
+                <h3>Sombra</h3>
+                <p>Muito inteligente, adora resolver quebra-cabeças e esconder chaves brilhantes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1590422749876-0033ab7194f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corvo em um galho">
+            <div class="card-content">
+                <h3>Edgar</h3>
+                <p>O poeta da turma. Gosta de ficar empoleirado observando a chuva cair.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1616422285623-149021204f14?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corvo com nozes">
+            <div class="card-content">
+                <h3>Noz-Moscada</h3>
+                <p>Especialista em abrir amendoins e fazer amizade em troca de petiscos.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido com muita criatividade e café. <span>Criativus</span> © 2026</p>
+    </footer>
+
+</body>
+</html>

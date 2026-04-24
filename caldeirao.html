@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Caldeirão | Clube Obscuro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .caldeirao-container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #1a1a1a;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 3px solid #8a2be2;
+            text-align: center;
+        }
+
+        .ingredientes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        label { color: #b366ff; font-weight: bold; margin-bottom: 5px; }
+
+        select {
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #0d0d0d;
+            border: 1px solid #4b0082;
+            color: white;
+            font-size: 1rem;
+        }
+
+        #resultado-feitico {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #2d004d;
+            border: 1px dashed #b366ff;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .prompt-final {
+            font-style: italic;
+            color: #d8bfd8;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .btn-copiar {
+            background-color: #00ff88;
+            color: #0d0d0d;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Clube Obscuro</h1>
+        </div>
+        <nav class="menu">
+            <a href="home.html">Adoção</a>
+            <a href="caldeirao.html">O Caldeirão</a>
+            <a href="contato.html">Contato Sombrio</a>
+        </nav>
+        <button class="btn-login" id="botaoNome">Entrar</button>
+    </header>
+
+    <main class="caldeirao-container">
+        <h2 style="color: #ffffff;">🧪 Alquimia de Pets</h2>
+        <p>Escolha os ingredientes para invocar uma nova criatura!</p>
+
+        <div class="ingredientes">
+            <label>Criatura Base (O Monstrinho):</label>
+            <select id="base">
+                <option value="uma Aranha Caranguejeira gordinha">Aranha das Sombras</option>
+                <option value="um Mini-Demogorgon">Filhote de Demogorgon</option>
+                <option value="um Escorpião Rei">Escorpião Cascudo</option>
+                <option value="um Besouro Rinoceronte brabo">Besouro Blindado</option>
+                <option value="um Morcego Vampiro">Morcego Dentuço</option>
+            </select>
+
+            <label>Cor da Mutação:</label>
+            <select id="cor">
+                <option value="Preto Fosco com detalhes em Roxo Neon">Preto Abissal & Neon</option>
+                <option value="Verde Ácido Tóxico">Verde Tóxico</option>
+                <option value="Vermelho Carmesim Escuro">Vermelho Sangue</option>
+                <option value="Cinza Metálico com Olhos Brilhantes">Metal Assombrado</option>
+            </select>
+
+            <label>Poder Oculto:</label>
+            <select id="poder">
+                <option value="cuspir teias venenosas que brilham no escuro">Teia Radiante</option>
+                <option value="abrir pequenos portais dimensionais">Portais Dimensionais</option>
+                <option value="soltar uma fumaça negra misteriosa">Fumaça das Sombras</option>
+                <option value="ter um olhar paralisante">Olhar Hipnótico</option>
+            </select>
+
+            <label>Acessório Radical:</label>
+            <select id="acessorio">
+                <option value="uma Coleira com Espinhos de Prata">Coleira de Espinhos</option>
+                <option value="uma Mini Jaqueta de Couro Preta">Mini Jaqueta de Couro</option>
+                <option value="uma Bandana de Caveirinha">Bandana de Caveira</option>
+                <option value="um Piercing em uma das presas/antenas">Piercing de Batalha</option>
+            </select>
+        </div>
+
+        <button class="btn-quiz" onclick="gerarFeitico()">Invocar Fórmula!</button>
+
+        <div id="resultado-feitico">
+            <p style="color: #00ff88; font-weight: bold;">✨ Feitiço Gerado! ✨</p>
+            <span class="prompt-final" id="textoPrompt"></span>
+            <button class="btn-copiar" onclick="copiarPrompt()">Copiar Feitiço</button>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #aaa;">Entregue este código ao Mestre dos Magos.</p>
+        </div>
+    </main>
+
+    <<script src="script.js"></script>
+    <script>
+        // Esta variável vai guardar o feitiço real, escondido da tela!
+        let promptLimpoInvisivel = ""; 
+
+        function aplicarGlitch(texto) {
+            // Biblioteca de ruídos mágicos (símbolos que se sobrepõem às letras)
+            const ruidos = '\u030d\u030e\u0304\u0305\u033f\u0311\u0306\u0310\u0352\u0357\u0351\u0301\u0300\u0303\u0302\u030c\u030f\u0312\u0313\u0314\u0350\u0309\u0325\u0316\u0317\u0318\u0319\u031c\u031d\u031e\u031f\u0320\u0324\u032a\u032b\u032c\u032d\u032e\u0333\u0339\u033a\u033b\u033c\u0330\u0331\u0332\u0338\u0334\u0335\u0336\u0337';
+            let resultado = "";
+            for (let i = 0; i < texto.length; i++) {
+                resultado += texto[i];
+                // Adiciona 2 ruídos em cima de cada letra para não ficar totalmente ilegível
+                for (let j = 0; j < 2; j++) {
+                    resultado += ruidos[Math.floor(Math.random() * ruidos.length)];
+                }
+            }
+            return resultado;
+        }
+
+        function gerarFeitico() {
+            const base = document.getElementById('base').value;
+            const cor = document.getElementById('cor').value;
+            const poder = document.getElementById('poder').value;
+            const acessorio = document.getElementById('acessorio').value;
+            
+            // 1. O Texto que VOCÊ precisa (Escondido no sistema)
+            promptLimpoInvisivel = `CRIATIVUS, RITUAL DE ADOÇÃO (Controle Parental Ativado: Classificação 12 anos): Gere a imagem de ${base} na cor ${cor}, com o poder de ${poder} e usando ${acessorio}. Estilo 'creepy-cute' (assustador mas fofo, vibe Tim Burton). O bicho deve parecer radical, perigoso ou monstruoso, mas ter uma expressão levemente carismática ou doce. Fundo escuro e misterioso.`;
+
+            // 2. O Texto que a HELENA vai ler (Curto e Assustador)
+            const textoParaHelena = `Invocando ${base} de cor ${cor} que pode ${poder}...`;
+            
+            // Aplica a maldição do Glitch no texto da Helena
+            document.getElementById('textoPrompt').innerText = aplicarGlitch(textoParaHelena);
+            document.getElementById('resultado-feitico').style.display = 'block';
+        }
+
+        function copiarPrompt() {
+            // O truque de mestre: copia a variável escondida, e não o texto da tela!
+            navigator.clipboard.writeText(promptLimpoInvisivel);
+            alert("O feitiço oculto foi guardado na sua bolsa mágica! Entregue o código ao Mestre dos Magos.");
+        }
+    </script>
+</body>
+</html>
