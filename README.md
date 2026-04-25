@@ -3,8 +3,7 @@
 Bem-vindo ao Clube do Corvo, um portal místico desenvolvido para a exploração e adoção de criaturas fantásticas.
 Este projeto combina o estilo creepy-cute (vibe Tim Burton) com interatividade web moderna.
 
-A proposta foi criar uma experiência onde crianças possam interagir com programação básica de HTML (utilizando o VS Code) e estabelecer um contato responsável e criativo com a Inteligência Artificial.
-
+A proposta foi criar uma experiência onde crianças possam interagir com programação básica de HTML (utilizando o VS Code)<br> e estabelecer um contato responsável e criativo com a Inteligência Artificial.
 ⚠️ Nota de Segurança: É recomendado que o uso seja sempre acompanhado por um responsável (Guardião).
 
 🔮 O Caldeirão de Prompts
@@ -18,10 +17,10 @@ O sistema garante que a cópia seja feita de forma limpa para o uso imediato.
 
 O Clube do Corvo é uma aplicação web interativa onde o usuário Guardião irá:
 
-Realizar um Quiz de Personalidade para descobrir sua afinidade mágica.<br>
-Utilizar o Caldeirão Místico para criar poções e invocar pets personalizados (com controle parental definido para 12 anos).<br>
-Enviar mensagens através da Torre dos Corvos Correios (com animações exclusivas em CSS).<br>
-O projeto foi construído no ambiente Corvus Rex e dedicado com carinho à mini-cliente Helena.<br>
+--> Realizar um Quiz de Personalidade para descobrir sua afinidade mágica.<br>
+--> Utilizar o Caldeirão Místico para criar poções e invocar pets personalizados (com controle parental definido para 12 anos).<br>
+--> Enviar mensagens através da Torre dos Corvos Correios (com animações exclusivas em CSS).<br>
+--> O projeto foi construído no ambiente Corvus Rex e dedicado com carinho à mini-cliente Helena.<br>
 
 🧪 Tecnologias Utilizadas
 HTML5: Estrutura semântica das páginas de adoção e rituais.
