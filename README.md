@@ -1,6 +1,6 @@
 # 🦅 Clube do Corvo - Ritual de Adoção de Pets
 
-Bem-vindo ao **Clube do Corvo**, um portal místico desenvolvido para a exploração e adoção de criaturas fantásticas. Este projeto combina o estilo *creepy-cute* (vibe Tim Burton) com interatividade web moderna.<br>Criado totalmente por IA (Gemini) com proposta de controle parental em 12 anos.<br>
+Bem-vindo ao **Clube do Corvo**, um portal místico desenvolvido para a exploração e adoção de criaturas fantásticas. Este projeto combina o estilo *creepy-cute* (vibe Tim Burton) com interatividade web moderna.
 
 A proposta foi criar algo para que crianças possam interagir com progamação básica de HMTL (Vs Code) e que tenha contato responsável com a IA.<br>
 
@@ -27,4 +27,7 @@ O projeto foi construído para o **Corvus Rex** (ambiente de desenvolvimento de 
 ## 🚀 Como Rodar o Projeto
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SeuUsuario/Project-Helena-Pets.git](https://github.com/SeuUsuario/Project-Helena-Pets.git)
+   git clone https://github.com/Vini-Luchetti/Project-Helena-Pets.git
+
+🛡️ Licença
+Este projeto é de uso pessoal e educativo, desenvolvido sob a supervisão do Criativus para o treinamento de um Mestre das Forjas Digitais.
