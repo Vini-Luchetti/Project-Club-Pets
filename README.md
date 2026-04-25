@@ -17,10 +17,11 @@ O sistema garante que a cópia seja feita de forma limpa para o uso imediato.
 🕸️ Sobre o Projeto
 
 O Clube do Corvo é uma aplicação web interativa onde o usuário Guardião irá:
-Realizar um Quiz de Personalidade para descobrir sua afinidade mágica.
-Utilizar o Caldeirão Místico para criar poções e invocar pets personalizados (com controle parental definido para 12 anos).
-Enviar mensagens através da Torre dos Corvos Correios (com animações exclusivas em CSS).
-O projeto foi construído no ambiente Corvus Rex e dedicado com carinho à mini-cliente Helena.
+
+Realizar um Quiz de Personalidade para descobrir sua afinidade mágica.<br>
+Utilizar o Caldeirão Místico para criar poções e invocar pets personalizados (com controle parental definido para 12 anos).<br>
+Enviar mensagens através da Torre dos Corvos Correios (com animações exclusivas em CSS).<br>
+O projeto foi construído no ambiente Corvus Rex e dedicado com carinho à mini-cliente Helena.<br>
 
 🧪 Tecnologias Utilizadas
 HTML5: Estrutura semântica das páginas de adoção e rituais.
