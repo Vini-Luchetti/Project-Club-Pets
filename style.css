@@ -170,6 +170,15 @@ body {
     width: 100%;
 }
 
+#botaoNome {
+    background: rgba(138, 43, 226, 0.2);
+    border: 1px solid #8a2be2;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: default; /* Não parece um botão de clicar, mas um status */
+}
+
 .paginacao a {
     color: white;
     background-color: #1a0033;
