@@ -1,82 +1,45 @@
-// =========================================
-// 1. SISTEMA DE ECONOMIA (PENAS DE CRISTAL)
-// =========================================
+// script.js
 
-// Inicializa a economia do Guardião se for a primeira vez
+// Inicializa a economia se o Guardião for novo
 if (!localStorage.getItem('creditosMagicos')) {
-    localStorage.setItem('creditosMagicos', 3); // Começa com 3 créditos
+    localStorage.setItem('creditosMagicos', '3');
 }
 
 function atualizarInterface() {
-    // Busca o nome do guardião e os créditos atuais
-    let nomeGuardado = localStorage.getItem('nomeDoPet'); // Nome vindo do Quiz
-    let creditos = localStorage.getItem('creditosMagicos');
+    let nomeGuardado = localStorage.getItem('nomeDoPet');
+    let creditos = localStorage.getItem('creditosMagicos') || '0';
     
     const btnNome = document.getElementById('botaoNome');
-    
     if (btnNome) {
-        if (nomeGuardado) {
-            // Exibe Nome e Créditos no menu
-            btnNome.innerHTML = `🦅 ${nomeGuardado} | <span style="color: #00ff88;">✨ ${creditos} Penas</span>`;
-        } else {
-            btnNome.innerText = "Entrar";
-        }
+        btnNome.innerHTML = `🦅 ${nomeGuardado || "Guardião"} | <span style="color: #00ff88;">✨ ${creditos} Penas</span>`;
     }
 }
 
 function adotarPet(nomePet, imagemCaminho) {
-    let creditos = parseInt(localStorage.getItem('creditosMagicos'));
+    let creditosRaw = localStorage.getItem('creditosMagicos');
+    let creditos = parseInt(creditosRaw);
+
+    console.log(`Iniciando adoção de: ${nomePet}. Créditos atuais: ${creditos}`);
 
     if (creditos > 0) {
-        // Deduz um crédito
+        // Deduz o crédito
         creditos -= 1;
-        localStorage.setItem('creditosMagicos', creditos);
+        localStorage.setItem('creditosMagicos', creditos.toString());
         
-        // Ritual de Download Automático
+        // Ritual de Download
         const link = document.createElement('a');
         link.href = imagemCaminho;
-        link.download = `Meu_Pet_${nomePet}.png`;
+        link.download = `Pet_Sombrio_${nomePet}.png`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
 
-        alert(`✨ Sucesso! O ritual de adoção do ${nomePet} foi concluído.\nA criatura foi enviada para sua pasta de downloads!`);
-        
-        // Atualiza a barra de menu com o novo saldo
+        alert(`✨ O ritual funcionou! O ${nomePet} foi enviado para seus downloads.`);
         atualizarInterface();
     } else {
-        alert("❌ Suas Penas de Cristal acabaram! O Corvo Mensageiro precisa de mais tempo para encontrar novas penas nas montanhas...");
+        alert("❌ Suas Penas de Cristal acabaram! O Corvo precisa de tempo para buscar mais...");
     }
 }
 
-// =========================================
-// 2. CONTROLE DE MODAIS (JANELAS)
-// =========================================
-
-function abrirModal(id) {
-    document.getElementById(id).style.display = 'block';
-}
-
-function abrirModalCompra(nomePet) {
-    document.getElementById('modalCompra').style.display = 'block';
-    document.getElementById('tituloCompra').innerText = 'Adotar o ' + nomePet;
-}
-
-function fecharModais() {
-    if(document.getElementById('modalLogin')) document.getElementById('modalLogin').style.display = 'none';
-    if(document.getElementById('modalCompra')) document.getElementById('modalCompra').style.display = 'none';
-}
-
-function confirmarCompra() {
-    alert("✨ Sucesso! A confirmação foi enviada. Seu pet sombrio já está arrumando as malas para ir morar com você! ✨");
-    fecharModais();
-}
-
-// =========================================
-// 3. INICIALIZAÇÃO
-// =========================================
-
-// Carrega as informações assim que a página abre
-window.onload = function() {
-    atualizarInterface();
-};
+// Garante que a interface atualiza ao carregar
+window.addEventListener('load', atualizarInterface);
