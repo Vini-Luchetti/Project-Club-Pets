@@ -1,4 +1,16 @@
-/* style.css - Versão Consolidada e Sem Repetições */
+/* =========================================
+   VARIÁVEIS E BASE
+   ========================================= */
+:root {
+    --bg-dark: #0d0d0d;
+    --bg-card: #1a1a1a;
+    --text-light: #e0e0e0;
+    --purple-magic: #8a2be2;
+    --purple-dark: #4b0082;
+    --purple-glow: #b366ff;
+    --green-success: #00ff88;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,29 +19,32 @@
 }
 
 body {
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    padding-top: 100px; /* Consolidado: Cor + Espaço para o menu fixo */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding-top: 100px; /* Espaço fixo para o menu não cobrir o conteúdo */
+    line-height: 1.6;
 }
 
-/* Header Fixo */
+/* =========================================
+   NAVEGAÇÃO (Menu Fixo)
+   ========================================= */
 header {
-    background: linear-gradient(135deg, #1a0033 0%, #4b0082 100%);
+    background: linear-gradient(135deg, #1a0033 0%, var(--purple-dark) 100%);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid #8a2be2;
+    border-bottom: 4px solid var(--purple-magic);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
-/* Menu e Links */
 .menu a {
-    color: #e0e0e0;
+    color: var(--text-light);
     text-decoration: none;
     margin: 0 15px;
     font-weight: 500;
@@ -37,76 +52,103 @@ header {
 }
 
 .menu a:hover {
-    color: #b366ff;
+    color: var(--purple-glow);
 }
 
-/* Indicador de Status (Penas de Cristal) */
 #botaoNome {
     background: rgba(138, 43, 226, 0.2);
-    border: 1px solid #8a2be2;
-    padding: 8px 15px;
+    border: 1px solid var(--purple-magic);
+    padding: 8px 18px;
     border-radius: 20px;
     font-weight: bold;
     color: white;
     cursor: default;
     white-space: nowrap;
+    transition: 0.3s;
 }
 
-/* Cards de Criaturas */
+/* =========================================
+   GRID DE CARDS (O segredo da organização)
+   ========================================= */
+main.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .card {
-    background-color: #1a1a1a;
+    background-color: var(--bg-card);
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid #333;
-    transition: 0.3s;
-    margin-bottom: 2rem;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    border-color: #8a2be2;
+    transform: translateY(-8px);
+    border-color: var(--purple-magic);
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
 }
 
+/* Ajuste das Imagens (Para não ficarem enormes) */
 .pet-img {
     width: 100%;
-    height: 250px; /* Define uma altura fixa para padronizar os cards */
-    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcê-la */
+    height: 220px; /* Altura fixa para padronizar */
+    object-fit: cover; /* Corta sem distorcer */
     display: block;
 }
 
 .card-content {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card h3 { 
-    color: #b366ff;
+    color: var(--purple-glow);
     margin-bottom: 10px;
+    font-size: 1.4rem;
 }
 
 .preco { 
     font-weight: bold; 
-    margin: 10px 0; 
-    color: #00ff88; /* Verde para destacar a "riqueza" */
+    margin: 15px 0; 
+    color: var(--green-success);
+    font-size: 1.1rem;
 }
 
+/* =========================================
+   BOTÕES E INTERAÇÃO
+   ========================================= */
 .btn-comprar {
-    background-color: #8a2be2;
+    background-color: var(--purple-magic);
     color: white;
     border: none;
     padding: 12px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     width: 100%;
     font-weight: bold;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-comprar:hover { 
-    background-color: #5c1b99; 
+    background-color: var(--purple-dark);
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
 }
 
-/* Janelas Místicas (Modais) */
+/* =========================================
+   MODAIS E UTILITÁRIOS
+   ========================================= */
 .modal {
     display: none;
     position: fixed;
@@ -120,37 +162,31 @@ header {
     background-color: #1a0033;
     margin: 10% auto;
     padding: 2.5rem;
-    border: 2px solid #8a2be2;
+    border: 2px solid var(--purple-magic);
     width: 90%; 
     max-width: 400px;
     border-radius: 15px;
     text-align: center;
 }
 
-.modal-content input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #0d0d0d;
-    border: 1px solid #4b0082;
-    color: white;
-}
-
-/* Paginação */
 .paginacao {
     text-align: center;
-    margin: 3rem 0;
+    margin: 40px 0;
+    grid-column: 1 / -1; /* Garante que a paginação ocupe a linha toda no grid */
 }
 
 .paginacao a {
     color: white;
     background-color: #1a0033;
-    border: 1px solid #4b0082;
-    padding: 10px 20px;
+    border: 1px solid var(--purple-dark);
+    padding: 10px 18px;
     text-decoration: none;
     border-radius: 5px;
     margin: 0 5px;
-    font-weight: bold;
     transition: 0.3s;
+}
+
+.paginacao a.ativo, .paginacao a:hover {
+    background-color: var(--purple-magic);
+    border-color: var(--purple-glow);
 }
