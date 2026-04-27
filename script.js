@@ -1,9 +1,11 @@
 // script.js
 
 // 1. Inicializa o Tesouro do Guardião (Valor alto para as crianças)
-if (!localStorage.getItem('creditosMagicos')) {
-    localStorage.setItem('creditosMagicos', 1000); // Começa com 1000 Penas!
-}
+// if (!localStorage.getItem('creditosMagicos')) {
+//    localStorage.setItem('creditosMagicos', 1000); // Começa com 1000 Penas!
+//}
+
+localStorage.setItem('creditosMagicos', 1000);
 
 // 2. Função para atualizar o Nome e os Créditos no Menu
 function atualizarInterface() {
