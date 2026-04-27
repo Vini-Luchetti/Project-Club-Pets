@@ -1,45 +1,47 @@
 // script.js
 
-// Inicializa a economia se o Guardião for novo
+// 1. Inicializa o Tesouro do Guardião (Valor alto para as crianças)
 if (!localStorage.getItem('creditosMagicos')) {
-    localStorage.setItem('creditosMagicos', '3');
+    localStorage.setItem('creditosMagicos', 1000); // Começa com 1000 Penas!
 }
 
+// 2. Função para atualizar o Nome e os Créditos no Menu
 function atualizarInterface() {
-    let nomeGuardado = localStorage.getItem('nomeDoPet');
-    let creditos = localStorage.getItem('creditosMagicos') || '0';
+    const nome = localStorage.getItem('nomeDoPet') || "Guardião";
+    const creditos = localStorage.getItem('creditosMagicos');
     
-    const btnNome = document.getElementById('botaoNome');
-    if (btnNome) {
-        btnNome.innerHTML = `🦅 ${nomeGuardado || "Guardião"} | <span style="color: #00ff88;">✨ ${creditos} Penas</span>`;
+    // Procura o elemento que hoje diz "Entrar" ou o nome
+    const displayStatus = document.getElementById('botaoNome');
+    
+    if (displayStatus) {
+        // Estilo: 🦅 Nome | ✨ 100 Penas
+        displayStatus.innerHTML = `🦅 ${nome} | <span style="color: #00ff88;">✨ ${creditos} Penas</span>`;
     }
 }
 
+// 3. Função de Adoção com Consumo de Crédito e Download
 function adotarPet(nomePet, imagemCaminho) {
-    let creditosRaw = localStorage.getItem('creditosMagicos');
-    let creditos = parseInt(creditosRaw);
-
-    console.log(`Iniciando adoção de: ${nomePet}. Créditos atuais: ${creditos}`);
+    let creditos = parseInt(localStorage.getItem('creditosMagicos'));
 
     if (creditos > 0) {
-        // Deduz o crédito
+        // Gasta 1 Pena
         creditos -= 1;
-        localStorage.setItem('creditosMagicos', creditos.toString());
+        localStorage.setItem('creditosMagicos', creditos);
         
-        // Ritual de Download
+        // Faz o download da imagem
         const link = document.createElement('a');
         link.href = imagemCaminho;
-        link.download = `Pet_Sombrio_${nomePet}.png`;
+        link.download = `Pet_${nomePet}_ClubeDoCorvo.png`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
 
-        alert(`✨ O ritual funcionou! O ${nomePet} foi enviado para seus downloads.`);
+        alert(`✨ Ritual concluído! O ${nomePet} foi enviado para seus arquivos.\nVocê ainda tem ${creditos} Penas de Cristal.`);
         atualizarInterface();
     } else {
-        alert("❌ Suas Penas de Cristal acabaram! O Corvo precisa de tempo para buscar mais...");
+        alert("❌ Suas Penas acabaram! O Corvo precisa de tempo para buscar mais no vale das sombras.");
     }
 }
 
-// Garante que a interface atualiza ao carregar
+// Inicializa tudo quando a página abre
 window.addEventListener('load', atualizarInterface);

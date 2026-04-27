@@ -199,3 +199,23 @@ body {
     background-color: #8a2be2;
     border-color: #b366ff;
 }
+
+/* Estilo para o visor de status no menu */
+#botaoNome {
+    background: rgba(138, 43, 226, 0.15); /* Roxo bem suave */
+    border: 1px solid #8a2be2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: default;
+    display: inline-block;
+    white-space: nowrap; /* Impede que o nome e as penas quebrem em duas linhas */
+    transition: 0.3s;
+}
+
+#botaoNome:hover {
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+    background: rgba(138, 43, 226, 0.25);
+}
