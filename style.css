@@ -69,7 +69,8 @@ header {
 
 .pet-img {
     width: 100%;
-    height: auto;
+    height: 250px; /* Define uma altura fixa para padronizar os cards */
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcê-la */
     display: block;
 }
 
