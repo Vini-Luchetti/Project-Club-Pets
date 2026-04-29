@@ -43,6 +43,53 @@ header {
     backdrop-filter: blur(10px);
 }
 
+/* Estilo básico para o botão hambúrguer (escondido por padrão) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #b366ff; /* Roxo padrão do projeto */
+    transition: 0.3s;
+}
+
+/* Regras para Celulares/Tablets */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .menu {
+        display: none; /* Esconde o menu original */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Ajuste conforme a altura do seu header */
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a; /* Cor sombria de fundo */
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+        z-index: 1000;
+        border-bottom: 2px solid #b366ff;
+    }
+
+    /* Classe que o JS vai ativar */
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        font-size: 1.2rem;
+    }
+}
+
 .menu a {
     color: var(--text-light);
     text-decoration: none;

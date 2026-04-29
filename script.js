@@ -21,6 +21,18 @@ function atualizarInterface() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        
+        // Opcional: Animação simples no hambúrguer
+        menuToggle.classList.toggle('is-active');
+    });
+});
+
 // 3. Função de Adoção com Consumo de Crédito e Download
 function adotarPet(nomePet, imagemCaminho) {
     let creditos = parseInt(localStorage.getItem('creditosMagicos'));

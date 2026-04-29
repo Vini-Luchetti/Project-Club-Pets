@@ -9,18 +9,23 @@
 <body>
 
     <header>
-        <div class="logo">
-            <h1 style="font-size: 1.5rem;">Clube do Corvo</h1>
-        </div>
-        
-        <nav class="menu">
-            <a href="home.html">Adoção</a>
-            <a href="caldeirao.html">O Caldeirão</a>
-            <a href="contato.html">Contato Sombrio</a>
-        </nav>
+    <div class="logo">
+        <h1 style="font-size: 1.5rem;">Clube do Corvo</h1>
+    </div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
 
+    <nav class="menu" id="nav-menu">
+        <a href="home.html">Adoção</a>
+        <a href="caldeirao.html">O Caldeirão</a>
+        <a href="contato.html">Contato Sombrio</a>
         <button class="btn-login" id="botaoNome" onclick="abrirModal('modalLogin')">Entrar</button>
-    </header>
+    </nav>
+</header>
 
     <main class="container">
         <div class="card">
@@ -56,7 +61,7 @@
             <img src="img/severo.png" alt="Uma aranha verde-ácida que cospe teias neon enquanto desfila com sua estilosa jaquetinha de couro preta." class="pet-img">
             <div class="card-content">
                 <h3>Severo</h3>
-                <p>Poeta, fofo e levemente dramático.</p> //alterar aqui
+                <p>Poeta, fofo e levemente dramático.</p>
                 <p class="preco">💎 1 Pena de Cristal</p>
         <button class="btn-comprar" onclick="adotarPet('Sombra', 'img/severo.png')">Adotar & Download</button>
             </div>
