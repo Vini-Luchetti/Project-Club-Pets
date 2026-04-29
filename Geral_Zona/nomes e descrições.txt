@@ -1,0 +1,61 @@
+ID,Criatura,Descrição Mística para o Card
+
+01,Cobra Caninana de Mercúrio,Uma serpente chicoteadora com escamas em verde água metálico que refletem o futuro. Dizem que seu rastro brilha no escuro como um rio de veneno prateado.
+
+02,Sapo Cururu do Trovão,Este anfíbio de pele rosa choque elétrico pulsa com energia estática. Cada coaxar libera pequenas faíscas que podem fritar insetos a metros de distância.
+
+03,Lacraia Blindada Abissal,"Com 100 patas de agulha e uma carapaça de metal assombrado, ela se move sem fazer barulho. Seus olhos brilhantes enxergam através de paredes sólidas."
+
+04,Formiga Atômica de Magma,"Pequena, mas com o peso de uma estrela. Sua mandíbula de aço brilha em laranja vulcânico e ela é capaz de carregar pedras mil vezes maiores que seu corpo."
+
+05,Lagartixa Camaleônica de Éter,Uma criatura das paredes esquecidas que muda de cor para o roxo galáctico. Ela possui o poder de abrir pequenos portais para atravessar frestas impossíveis.
+
+06,Lagarta Peluda Real,"Coberta por pelos que parecem fios de ouro envelhecido, esta criatura flutua levemente. Seu toque pode paralisar o tempo por alguns segundos."
+
+07,Centopeia Dracônica de Gelo,Uma ancestral das cavernas com escamas de cristal azul glacial. Seu sopro de geada transforma qualquer obstáculo em estátua de gelo instantaneamente.
+
+08,Salamandra Fantasmagórica,"Um ser de ectoplasma perolado que vive no fogo azul. Ela não queima, ela resfria o ambiente até que o ar vire névoa misteriosa."
+
+09,Aranha das Sombras Neon,Uma caranguejeira gordinha em preto fosco com marcas roxas pulsantes. Suas teias venenosas brilham como fios de fibra ótica na escuridão.
+
+10,Escorpião Rei de Ferro,"Totalmente revestido em metal corroído pelo tempo. Seu ferrão não injeta veneno, mas sim uma fumaça negra que cega seus oponentes."
+
+11,Besouro Blindado de Ouro,Um tanque de guerra em miniatura. Sua casca de ouro sombrio é impenetrável e ele usa um monóculo místico para detectar tesouros.
+
+12,Morcego Vampiro de Elite,"Um morcego dentuço com uma mini jaqueta de couro preta. Ele voa em silêncio absoluto, deixando apenas um rastro de cheiro de chuva."
+
+13,Serpente das Gemas Eternas,Uma cobra majestosa com gemas da morte cravadas ao longo do corpo. Ela hipnotiza suas presas com o brilho de suas esmeraldas malditas.
+
+14,Sapo de Cartola e Laser,O lorde dos pântanos. Ele usa uma cartola de veludo e dispara raios laser purpúreos pelos olhos para defender seu território.
+
+15,Lacraia da Tiara Ancestral,Uma centopeia gigante que ostenta uma joia pulsante na testa. Ela consegue prever o próximo movimento de qualquer criatura que se aproxime.
+
+16,Salamandra de Botas Gravitacionais,"Graças às suas botinhas mágicas, ela ignora as leis da física, caminhando calmamente pelo teto enquanto solta fagulhas de fogo azul."
+
+17,Lagarta do Terceiro Olho,"Uma criatura peluda que possui uma gema mística na testa. Ela não enxerga o mundo físico, apenas a aura de energia de quem a observa."
+
+18,Formiga do Enxame Galáctico,Uma operária cósmica que usa uma bandana de caveira. Ela pode invocar um exército de formigas fantasmagóricas para ajudá-la em combate.
+
+
+
+
+
+Alice,Aranha Tecelã de Cristais,"Com um olhar doce e cores vibrantes, Alice tece teias que parecem fios de seda mágica. Ela não morde; ela aprisiona pesadelos para transformá-los em sonhos coloridos."
+
+Cintilante,Escorpião de Neon Estelar,Uma criatura que brilha com a intensidade de uma supernova. Cintilante usa suas cores elétricas para iluminar caminhos sombrios e seu ferrão dispara lampejos de pura alegria.
+
+Doca,Cobra Coral das Nuvens,Doca é uma serpente serena que flutua entre o mundo real e o místico. Suas escamas em tons pastéis escondem um poder de camuflagem que a torna invisível sob a luz do sol.
+
+Edgar,Morcego Guardião da Noite,"Edgar é o vigia oficial das sombras. Com suas asas de couro macio e olhar atento, ele protege o laboratório contra intrusos, usando seu radar para detectar segredos à distância."
+
+Filomena,Besouro Blindado de Rubi,"Majestosa e resistente, Filomena possui uma carapaça que brilha como uma joia preciosa. Ela é a força bruta do grupo, capaz de carregar tesouros pesadíssimos com elegância."
+
+Gorgon,Filhote de Demogorgon Galáctico,"Apesar da aparência intimidadora, Gorgon é um explorador interdimensional curioso. Ele abre portais para buscar lanches em outras galáxias e adora um carinho entre as antenas."
+
+Jeninho,Gênio das Presas de Prata,Uma aranha caranguejeira com um estilo único. Jeninho é mestre em encontrar itens perdidos e usa seus acessórios radiais para se destacar em qualquer festa mística.
+
+Jersey,Centopeia das Mil Cores,"Jersey é um arco-íris rastejante. Cada uma de suas patas se move em um ritmo diferente, criando uma melodia hipnótica enquanto ela desliza pelas paredes do Clube."
+
+Jonatan,Salamandra de Fogo Frio,"Jonatan vive em ambientes gelados, mas seu corpo emite um calor azulado e relaxante. Ele é o companheiro perfeito para noites de estudo e grandes aventuras sob a neve."
+
+Junior,Escorpião Punk-Radical,"O mais rebelde do laboratório. Junior usa sua bandana de caveira e seu visual agressivo para mostrar que, no Clube do Corvo, o estilo é tão importante quanto o poder oculto."
