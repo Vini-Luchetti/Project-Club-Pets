@@ -61,29 +61,58 @@
 
     <main>
         <div class="video-grid">
-            <div class="video-item">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/corvo1.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos.
-                </video>
-                <div class="video-info">
-                    <h3>Voo Noturno</h3>
-                </div>
-            </div>
-
-            <div class="video-item">
-                <video autoplay muted loop playsinline>
-                    <source src="videos/corvo2.mp4" type="video/mp4">
-                </video>
-                <div class="video-info">
-                    <h3>O Mistério de Edgar</h3>
-                </div>
-            </div>
+    <!-- Vídeo 1 -->
+    <div class="video-item">
+        <video controls playsinline poster="img/capa1.png">
+            <source src="anima/amigas.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+        <div class="video-info">
+            <h3>Papo de amigas</h3>
         </div>
+    </div>
+    <!-- Vídeo 2 -->
+    <div class="video-item">
+        <video controls playsinline poster="img/capa2.png">
+            <source src="anima/thekey.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+        <div class="video-info">
+            <h3>O mistério da chave dourada</h3>
+        </div>
+    </div>
+    <!-- Vídeo 3 -->
+    <div class="video-item">
+        <video controls playsinline loop poster="img/capa3.png">
+            <source src="anima/kokiltus.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+        <div class="video-info">
+            <h3>A caminhada de Kokiltus</h3>
+        </div>
+    </div>
+</div>
     </main>
 
-    <div id="modalLogin" class="modal">...</div>
-    <div id="modalRecarga" class="modal">...</div>
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <h2>Acesso Secreto</h2>
+            <p>Apenas para guardiões de pets.</p>
+            <input type="text" id="inputNome" placeholder="Nome de Guardião">
+            <input type="password" placeholder="Senha Mágica">
+            <button class="btn-comprar" onclick="fazerLogin()">Acessar Portal</button>
+            <button class="btn-login" onclick="fecharModais()">Cancelar</button>
+        </div>
+    </div>
+    <div id="modalRecarga" class="modal">
+        <div class="modal-content">
+            <h2 style="color: #b366ff;">O Baú do Corvo</h2>
+            <p>Suas Penas de Cristal acabaram!</p>
+            <div id="bauMagico" onclick="realizarRecarga()" style="font-size: 5rem; cursor: pointer; transition: transform 0.2s;">🎁</div>
+            <p>Clique no baú para recarregar.</p>
+            <button class="btn-login" onclick="fecharModais()">Sair</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

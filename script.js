@@ -88,3 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
 window.onclick = (event) => {
     if (event.target.classList.contains('modal')) fecharModais();
 };
+
