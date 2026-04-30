@@ -46,7 +46,8 @@ Cintilante,Escorpião de Neon Estelar,Uma criatura que brilha com a intensidade 
 
 Doca,Cobra Coral das Nuvens,Doca é uma serpente serena que flutua entre o mundo real e o místico. Suas escamas em tons pastéis escondem um poder de camuflagem que a torna invisível sob a luz do sol.
 
-Edgar,Morcego Guardião da Noite,"Edgar é o vigia oficial das sombras. Com suas asas de couro macio e olhar atento, ele protege o laboratório contra intrusos, usando seu radar para detectar segredos à distância."
+<h3>Edgar, Escorpião Guardião da Noite</h3>
+<p>Edgar é o vigia oficial das sombras. Com suas cauda venenosa e olhar atento, ele protege o laboratório contra intrusos, usando suas garras para defender segredos.</p>
 
 Filomena,Besouro Blindado de Rubi,"Majestosa e resistente, Filomena possui uma carapaça que brilha como uma joia preciosa. Ela é a força bruta do grupo, capaz de carregar tesouros pesadíssimos com elegância."
 
