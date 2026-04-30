@@ -64,17 +64,29 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>Clube do Corvo</h1>
+   <header>
+    <div class="logo">
+        <h1 style="font-size: 1.5rem;">Clube do Corvo</h1>
+    </div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</div>
+    <nav class="menu" id="nav-menu">
+        <a href="home.html">Adoção</a>
+        <a href="caldeirao.html">O Caldeirão</a>
+        <a href="contato.html">Contato Sombrio</a>
+        <a href="video.html">Cinemateca do Corvo</a>
+        <button class="btn-login" id="botaoNome" onclick="abrirModal('modalLogin')">Entrar</button>
+        <div class="saldo-container">
+            <span id="saldoPenas">💎 20</span>
         </div>
-        <nav class="menu">
-            <a href="home.html">Adoção</a>
-            <a href="caldeirao.html">O Caldeirão</a>
-            <a href="contato.html">Contato Sombrio</a>
         </nav>
-        <button class="btn-login" id="botaoNome">Entrar</button>
-    </header>
+</header>
 
     <main class="caldeirao-container">
         <h2 style="color: #ffffff;">🧪 Alquimia de Pets</h2>

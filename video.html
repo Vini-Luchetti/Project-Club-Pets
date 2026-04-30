@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube do Corvo - Cinemateca</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo específico para a grade de vídeos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+        }
+        .video-item {
+            background: #141414;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+        .video-item:hover {
+            border-color: #b366ff;
+            transform: scale(1.02);
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+        .video-info {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Clube do Corvo</h1>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="menu" id="nav-menu">
+            <a href="home.html">Adoção</a>
+            <a href="video.html" class="ativo">Cinemateca</a>
+            <a href="contato.html">Contato Sombrio</a>
+            <button class="btn-login" id="botaoNome" onclick="abrirModal('modalLogin')">Entrar</button>
+            <div class="saldo-container">
+                <span id="saldoPenas">💎 20</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="video-grid">
+            <div class="video-item">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/corvo1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <div class="video-info">
+                    <h3>Voo Noturno</h3>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/corvo2.mp4" type="video/mp4">
+                </video>
+                <div class="video-info">
+                    <h3>O Mistério de Edgar</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modalLogin" class="modal">...</div>
+    <div id="modalRecarga" class="modal">...</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

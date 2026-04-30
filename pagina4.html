@@ -3,92 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Sombrios & Fofos</title>
+    <title>Clube do Corvo - Página 4</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-    <div class="logo">
-        <h1 style="font-size: 1.5rem;">Clube do Corvo</h1>
-    </div>
-    
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+        <div class="logo">
+            <h1>Clube do Corvo</h1>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
 
-    <nav class="menu" id="nav-menu">
-        <a href="home.html">Adoção</a>
-        <a href="caldeirao.html">O Caldeirão</a>
-        <a href="contato.html">Contato Sombrio</a>
-        <button class="btn-login" id="botaoNome" onclick="abrirModal('modalLogin')">Entrar</button>
-    </nav>
-</header>
+        <nav class="menu" id="nav-menu">
+            <a href="home.html">Adoção</a>
+            <a href="video.html">Cinemateca</a>
+            <a href="contato.html">Contato Sombrio</a>
+            <button class="btn-login" id="botaoNome" onclick="abrirModal('modalLogin')">Entrar</button>
+            <div class="saldo-container">
+                <span id="saldoPenas">💎 20</span>
+            </div>
+        </nav>
+    </header>
 
     <main class="container">
         <div class="card">
-            <img src="img/cintilante.png" alt="Poeta, fofo e levemente dramático." class="pet-img">
+            <img src="img/luna.png" alt="Luna" class="pet-img">
             <div class="card-content">
-                <h3>Cintilante</h3>
-                <p>Curioso e adora roubar chaves.</p>
+                <h3>Luna</h3>
+                <p>Guardiã dos sonhos e das noites estreladas.</p>
                 <p class="preco">💎 1 Pena de Cristal</p>
-        <button class="btn-comprar" onclick="adotarPet('Sombra', 'img/cintilante.png')">Adotar & Download</button>
+                <button class="btn-comprar" onclick="adotarPet('Luna')">Adotar</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="img/jeninho.png" alt="Uma aranha verde-ácida que cospe teias neon enquanto desfila com sua estilosa jaquetinha de couro preta." class="pet-img">
+            <img src="img/misterio.png" alt="Pet Mistério" class="pet-img">
             <div class="card-content">
-                <h3>Jeninho</h3>
-                <p>Poeta, fofo e levemente dramático.</p>
+                <h3>???</h3>
+                <p>Um pet secreto que ainda será revelado.</p>
                 <p class="preco">💎 1 Pena de Cristal</p>
-        <button class="btn-comprar" onclick="adotarPet('Sombra', 'img/jeninho.png')">Adotar & Download</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/doca.png" alt="Uma aranha verde-ácida que cospe teias neon enquanto desfila com sua estilosa jaquetinha de couro preta." class="pet-img">
-            <div class="card-content">
-                <h3>Doca</h3>
-                <p>Curioso e adora roubar chaves.</p>
-                <p class="preco">💎 1 Pena de Cristal</p>
-        <button class="btn-comprar" onclick="adotarPet('Sombra', 'img/doca.png')">Adotar & Download</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="img/jonatan.png" alt="Uma aranha verde-ácida que cospe teias neon enquanto desfila com sua estilosa jaquetinha de couro preta." class="pet-img">
-            <div class="card-content">
-                <h3>Jonatan</h3>
-                <p>Poeta, fofo e levemente dramático.</p>
-                <p class="preco">💎 1 Pena de Cristal</p>
-        <button class="btn-comprar" onclick="adotarPet('Sombra', 'img/jonatan.png')">Adotar & Download</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/junior.png" alt="Uma aranha verde-ácida que cospe teias neon enquanto desfila com sua estilosa jaquetinha de couro preta." class="pet-img">
-            <div class="card-content">
-                <h3>Junior</h3>
-                <p>Curioso e adora roubar chaves.</p>
-                <p class="preco">💎 1 Pena de Cristal</p>
-        <button class="btn-comprar" onclick="adotarPet('Sombra', 'img/junior.png')">Adotar & Download</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-placeholder">Aguardando Arte da Helena...</div>
-            <div class="card-content">
-                <h3>Edgar</h3>
-                <p>Poeta, fofo e levemente dramático.</p>
-                <p class="preco">R$ 200,00</p>
-                <button class="btn-comprar" onclick="abrirModalCompra('Edgar')">Adotar</button>
+                <button class="btn-comprar" onclick="adotarPet('Pet Secreto')">Adotar</button>
             </div>
         </div>
     </main>
 
     <div class="paginacao">
-        <a href="home.html" >1</a>
+        <a href="home.html">1</a>
         <a href="pagina2.html">2</a>
         <a href="pagina3.html">3</a>
         <a href="pagina4.html" class="ativo">4</a>
@@ -96,23 +61,30 @@
 
     <div id="modalLogin" class="modal">
         <div class="modal-content">
-            <h2 style="color: #b366ff;">Acesso Secreto</h2>
+            <h2>Acesso Secreto</h2>
             <p>Apenas para guardiões de pets.</p>
-            <input type="text" placeholder="Nome de Guardião">
+            <input type="text" id="inputNome" placeholder="Nome de Guardião">
             <input type="password" placeholder="Senha Mágica">
-            <button class="btn-comprar" onclick="fecharModais()">Acessar Portal</button>
-            <button class="btn-login" style="margin-top: 10px; width: 100%;" onclick="fecharModais()">Cancelar</button>
+            <button class="btn-comprar" onclick="fazerLogin()">Acessar Portal</button>
+            <button class="btn-login" onclick="fecharModais()">Cancelar</button>
         </div>
     </div>
 
     <div id="modalCompra" class="modal">
         <div class="modal-content">
-            <h2 id="tituloCompra" style="color: #b366ff;">Adoção</h2>
-            <p>Preencha para concluir o ritual de adoção.</p>
-            <input type="text" placeholder="Seu nome">
-            <input type="text" placeholder="Endereço do castelo">
-            <button class="btn-comprar" onclick="confirmarCompra()">Enviar Confirmação</button>
-            <button class="btn-login" style="margin-top: 10px; width: 100%;" onclick="fecharModais()">Voltar</button>
+            <h2 id="tituloCompra">Ritual de Adoção</h2>
+            <p>O pet está quase pronto para te seguir!</p>
+            <button class="btn-comprar" onclick="fecharModais()">Concluir Ritual</button>
+        </div>
+    </div>
+
+    <div id="modalRecarga" class="modal">
+        <div class="modal-content">
+            <h2 style="color: #b366ff;">O Baú do Corvo</h2>
+            <p>Suas Penas de Cristal acabaram!</p>
+            <div id="bauMagico" onclick="realizarRecarga()" style="font-size: 5rem; cursor: pointer; transition: transform 0.2s;">🎁</div>
+            <p>Clique no baú para recarregar.</p>
+            <button class="btn-login" onclick="fecharModais()">Sair</button>
         </div>
     </div>
 
